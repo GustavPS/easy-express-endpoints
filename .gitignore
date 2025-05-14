@@ -1,0 +1,24 @@
+# Node.js dependencies
+/node_modules/
+
+# Output of the TypeScript compiler
+/dist/
+/build/
+
+# TypeScript specific
+*.tsbuildinfo
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# NPM package lock files (optional if you want to exclude them)
+package-lock.json
+yarn.lock
