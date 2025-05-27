@@ -7,6 +7,7 @@ export interface RequestData<Body = unknown, Query = unknown, Params = unknown> 
   query: Query;
   params: Params;
   headers: IncomingHttpHeaders
+  response: Response;
 }
 
 export type MiddlewareFunc = (req: Request, res: Response, next: NextFunction) => void;

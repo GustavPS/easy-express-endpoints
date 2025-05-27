@@ -104,7 +104,7 @@ abstract class Endpoint {
 
   private setHeaders(res: Response, status: number, headers: Headers) {
     res.statusCode = status;
-    Array.from(headers).map(([ key, value ]) => res.setHeader(key, value));
+    Array.from(headers).map(([key, value]) => res.setHeader(key, value));
   }
 
   private async process(req: Request, res: Response, next: NextFunction) {
@@ -118,6 +118,7 @@ abstract class Endpoint {
           query: req.query,
           params: req.params,
           headers: req.headers,
+          response: res,
         };
 
         const responseHeaders = await this.headers(data);
